@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site Map</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-size: clamp(1rem, 1.5vw, 1.25rem);
+      font-family: sans-serif;
+      background: url('all/spacejoy-9M66C_w_ToM-unsplash.jpg') no-repeat center center fixed;
+      background-size: cover;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: black;
+    }
+
+    .sitemap {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
+
+    .section {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .section:hover {
+      transform: scale(1.05);
+    }
+
+    .section h2 {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: #0077cc;
+    }
+
+    .section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .section ul li {
+      margin: 8px 0;
+    }
+
+    .section ul li a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .section ul li a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #logo {
+      display: flex;
+      align-items: center;
+    }
+
+    #logo img {
+      width: 50px;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    #logo span {
+      font-family: 'Pacifico', cursive;
+      margin-left: 10px;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a img {
+      width: 30px;
+      transition: transform 0.3s ease;
+    }
+
+    nav ul li a img:hover {
+      transform: scale(1.1);
+    }
+
+    .menu-toggle {
+      font-size: 1.8rem;
+      cursor: pointer;
+      display: none;
+      background: none;
+      border: none;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .menu-toggle {
+        display: block;
+        margin-top: 10px;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        padding: 10px 0;
+      }
+
+      .section:hover {
+        transform: none;
+      }
+    }
+
+    @media (hover: none) {
+      .section:hover, li a img:hover {
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div id="logo">
+      <img src="/all/WhatsApp Image 2025-04-29 at 20.56.46_45134585.jpg" alt="Logo">
+      <span>Hudson Furnishings.</span>
+    </div>
+    <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#"><img src="/all/icons8-home-48.png" alt="Home"></a></li>
+        <li><a href="#"><img src="/all/icons8-twitterx-50.png" alt="Twitter"></a></li>
+        <li><a href="#"><img src="/all/icons8-linkedin-50.png" alt="LinkedIn"></a></li>
+        <li><a href="#"><img src="/all/icons8-youtube-logo-128.png" alt="YouTube"></a></li>
+        <li><a href="#"><img src="/all/icons8-question-mark-48.png" alt="Help"></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <h1>Website Overview</h1>
+  <div class="sitemap">
+    <div class="section">
+      <h2>Main Pages</h2>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">Menu</a></li>
+        <li><a href="/faq">Gallery</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Services</h2>
+      <ul>
+        <li><a href="/services/web-design">Offers</a></li>
+        <li><a href="/services/seo">Trade Centers</a></li>
+        <li><a href="/services/seo">Discounts</a></li>
+        <li><a href="/services/marketing">Marketing</a></li>
+        <li><a href="/services/marketing">Customer Services</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Blog</h2>
+      <ul>
+        <li><a href="/blog">Latest Posts</a></li>
+        <li><a href="/faq">Updates</a></li>
+        <li><a href="/faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Legal</h2>
+      <ul>
+        <li><a href="/terms">Terms & Conditions</a></li>
+        <li><a href="/privacy">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
+</body>
+</html>
